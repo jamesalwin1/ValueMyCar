@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Predictor</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+    <h2 class="logo">ValueMyCar</h2>
+    <p class="tagline">Know your car’s true worth instantly</p>
+</div>
+
+    <!-- MAIN CARD -->
+    <div class="container">
+
+        <h1>Find Your Car's True Value</h1>
+        <p class="subtitle">AI-powered car price prediction</p>
+
+        <form action="/predict" method="POST">
+
+            <div class="grid">
+
+                <div class="form-group">
+                    <label>Vehicle Age</label>
+                    <input type="number" name="vehicle_age" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Kilometers Driven</label>
+                    <input type="number" name="km_driven" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mileage (kmpl)</label>
+                    <input type="number" step="0.01" name="mileage" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Engine (cc)</label>
+                    <input type="number" name="engine" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Max Power (bhp)</label>
+                    <input type="number" step="0.01" name="max_power" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Seats</label>
+                    <input type="number" name="seats" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Seller Type</label>
+                    <select name="seller_type">
+                        <option>Dealer</option>
+                        <option>Individual</option>
+                        <option>Trustmark Dealer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Fuel Type</label>
+                    <select name="fuel_type">
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option>CNG</option>
+                        <option>LPG</option>
+                        <option>Electric</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Transmission</label>
+                    <select name="transmission_type">
+                        <option>Manual</option>
+                        <option>Automatic</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn">Predict Price</button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
