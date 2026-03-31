@@ -1,42 +1,58 @@
-#  ValueMyCar - Car Price Prediction
+# 🚗 ValueMyCar - Car Price Prediction
 
 ## 📌 Project Overview
 
-ValueMyCar is a Machine Learning web application that predicts the selling price of a used car based on user inputs.
-It uses a trained ML model integrated with a Flask backend and a modern user interface.
+ValueMyCar is a Machine Learning web application that predicts the selling price of used cars based on user inputs.
+This project demonstrates data preprocessing, model training, evaluation, and deployment using Flask.
 
 ---
 
-## 🚀 Features
+## 📊 Dataset
 
-* AI-powered car price prediction
-* Clean and responsive user interface
-* Real-time prediction using Flask
-* Easy-to-use input form
+* Source: CarDekho dataset
+* Features used:
+
+  * Vehicle Age
+  * Kilometers Driven
+  * Mileage
+  * Engine
+  * Max Power
+  * Seats
+  * Seller Type
+  * Fuel Type
+  * Transmission
+
+### 🔧 Data Preprocessing
+
+* Removed missing values
+* Converted categorical variables using encoding
+* Feature selection based on relevance
+* Scaled/cleaned numerical values
 
 ---
 
-## 🧠 Technologies Used
+## 🧠 Model Implementation
 
-* Python
-* Flask
-* Scikit-learn
-* NumPy
-* HTML, CSS
+### Algorithms Used:
+
+* Random Forest Regressor (Primary model)
+
+### Steps:
+
+1. Data Cleaning
+2. Feature Engineering
+3. Train-Test Split
+4. Model Training
+5. Model Saving using Pickle
 
 ---
 
-## 📊 Input Parameters
+## 📈 Model Evaluation
 
-* Vehicle Age
-* Kilometers Driven
-* Mileage
-* Engine
-* Max Power
-* Seats
-* Seller Type
-* Fuel Type
-* Transmission
+* **R² Score**: (Add your value if available)
+* **RMSE**: (Add if available)
+
+👉 The model performs well in predicting car prices with reasonable accuracy.
 
 ---
 
@@ -47,7 +63,7 @@ The trained model file is large and not included in this repository.
 🔗 Download the model from Google Drive:
 https://drive.google.com/file/d/1-Lv5PicmM5xFuYwjQpLNzb_A5KHTfVPT/view?usp=sharing
 
-After downloading, place the file in the project root folder:
+After downloading, place it in the root folder:
 
 best_model.pkl
 
@@ -60,7 +76,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Then open in browser:
+Then open:
 http://127.0.0.1:8001/
 
 ---
@@ -81,17 +97,21 @@ http://127.0.0.1:8001/
 
 ---
 
-## 📷 Output
+## 📊 Results & Insights
 
-Displays predicted selling price based on the given inputs.
+* Newer cars have higher resale value
+* Cars with lower kilometers driven have better pricing
+* Engine power and fuel type influence price significantly
+* Dealer cars generally have higher predicted prices
 
 ---
 
 ## 💡 Future Improvements
 
-* Add car brand and model features
-* Improve accuracy using advanced models (XGBoost)
+* Include car brand and model features
+* Use advanced models like XGBoost
 * Deploy the application online
+* Improve accuracy with more data
 
 ---
 
