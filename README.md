@@ -49,7 +49,7 @@ This project demonstrates data preprocessing, model training, evaluation, and de
 
 ## 📈 Model Evaluation
 
-* **R² Score**: (Add your value if available)
+* **R² Score**: 0.937379181346118
 * **RMSE**: (Add if available)
 
 👉 The model performs well in predicting car prices with reasonable accuracy.
