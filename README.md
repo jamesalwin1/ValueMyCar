@@ -1,4 +1,4 @@
-# 🚗 ValueMyCar - Car Price Prediction
+#  ValueMyCar - Car Price Prediction
 
 ## 📌 Project Overview
 
